@@ -6,4 +6,35 @@
   body {
     @apply antialiased;
   }
+
+  ol,
+  ul {
+    @apply pl-8;
+  }
+}
+
+@layer components {
+  .board-row {
+    @apply before:clear-both before:table;
+  }
+
+  .status {
+    @apply mb-3;
+  }
+
+  .square {
+    @apply float-left -mr-px -mt-px h-8 w-8 border border-[#999999] bg-white p-0 text-center text-2xl font-bold focus:outline-none;
+  }
+
+  .kbd-navigation .square {
+    @apply focus:bg-[#dddddd];
+  }
+
+  .game {
+    @apply flex flex-row;
+  }
+
+  .game-info {
+    @apply ml-5;
+  }
 }

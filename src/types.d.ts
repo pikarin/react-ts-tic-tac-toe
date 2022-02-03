@@ -1,0 +1,1 @@
+type SquareContent = null | string
