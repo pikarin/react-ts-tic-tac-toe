@@ -3,9 +3,7 @@ import calculateWinner from './calculateWinner'
 import GameBoardSquare from './GameBoardSquare'
 
 const GameBoard: React.FC = () => {
-  const [squares, setSquares] = useState<SquareContent[]>(
-    Array(9).fill(null)
-  )
+  const [squares, setSquares] = useState<SquareContent[]>(Array(9).fill(null))
   const [xIsNext, setXIsNext] = useState<boolean>(true)
 
   const handleClick = (i: number): void => {
@@ -35,21 +33,11 @@ const GameBoard: React.FC = () => {
 
   return (
     <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
-      </div>
-      <div className="board-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
-      </div>
-      <div className="board-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+      <div className="mb-3 text-center">{status}</div>
+      <div className="grid grid-cols-3 gap-px border border-gray-500 bg-gray-500">
+        {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
+        {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
+        {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
       </div>
     </div>
   )

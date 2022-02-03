@@ -1,14 +1,12 @@
-import GameBoard from "./GameBoard"
+import GameBoard from './GameBoard'
 
 const App: React.FC = () => {
   return (
-    <main className="game">
+    <main className="grid min-h-screen place-content-center">
       <section className="game-board">
         <GameBoard />
       </section>
-      <section className="game-info">
-        {/* Game Info */}
-      </section>
+      <section className="ml-5">{/* Game Info */}</section>
     </main>
   )
 }
