@@ -6,15 +6,4 @@
   body {
     @apply antialiased;
   }
-
-  ol,
-  ul {
-    @apply pl-8;
-  }
-}
-
-@layer components {
-  .kbd-navigation .square {
-    @apply focus:bg-[#dddddd];
-  }
 }
